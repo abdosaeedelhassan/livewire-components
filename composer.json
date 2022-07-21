@@ -1,0 +1,17 @@
+{
+    "name": "abdelrahman/livewire-components",
+    "description": "This package provide most nedded html input tags that configured by javascript as livewire components.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Abdelrahman\\LivewireComponents\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abdelrahman Saeed",
+            "email": "abdosaeedelhassan@gmail.com"
+        }
+    ],
+    "require": {}
+}
