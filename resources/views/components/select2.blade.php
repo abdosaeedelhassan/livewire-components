@@ -1,4 +1,4 @@
-<div>
+<div wire:ignore>
     <select name="{{$componentId}}" id="{{$componentId}}" class="{{$componentId}} form-control">
     </select>
 </div>
@@ -11,11 +11,11 @@
             multiple:false,
             // theme:"classic",
             dropdownAutoWidth : true,
-            data:@json($options)
+            allowClear: true,
+            data:@json($optionsList)
         });
         $('#{{$componentId}}').on('select2:select', function (e) {
-            var data = e.params.data;
-            console.log(data);
+            @set('selectedClientId',e.params.data.id);
         });
     });
 </script>

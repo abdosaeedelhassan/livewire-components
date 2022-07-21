@@ -11,7 +11,7 @@ class Select2 extends Component
 {
 
     public $componentId;
-    public $options = [];
+    public $options;
 
     public $placeholder;
 
@@ -19,12 +19,16 @@ class Select2 extends Component
     {
         $this->componentId = $id;
 
+        if (!is_array($options)) {
+            throwException(new Exception(__('Invialid options: options param must be an array.')));
+        }
+
         foreach ($options as $option) {
             if (!isset($option['id']) || !isset($option['text'])) {
                 throwException(new Exception(__('Invialid options: each option must contain (id,text) as attributte.')));
             }
         }
-        $this->options = $options;
+        $this->options = json_encode($options);
 
         if (!$placeholder) {
             $placeholder = __('Select an option');
@@ -34,6 +38,8 @@ class Select2 extends Component
 
     public function render()
     {
-        return view('livewire-components::components.select2');
+        return view('livewire-components::components.select2', [
+            'optionsList' => json_decode($this->options)
+        ]);
     }
 }
