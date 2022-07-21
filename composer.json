@@ -1,5 +1,5 @@
 {
-    "name": "abdelrahman/livewire-components",
+    "name": "asayhome/livewire-components",
     "description": "This package provide most nedded html input tags that configured by javascript as livewire components.",
     "type": "library",
     "autoload": {
