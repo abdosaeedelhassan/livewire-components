@@ -4,7 +4,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Abdelrahman\\LivewireComponents\\": "src/"
+            "AsayHome\\LivewireComponents\\": "src/"
         }
     },
     "authors": [
@@ -13,5 +13,12 @@
             "email": "abdosaeedelhassan@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AsayHome\\LivewireComponents\\LivewireComponentsServiceProvider"
+            ]
+        }
+    },
     "require": {}
 }
